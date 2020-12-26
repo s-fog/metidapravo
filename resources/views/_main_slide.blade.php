@@ -4,7 +4,7 @@
         <source srcset="{{ $bgMobile }}.webp, {{ $bgMobile }}@2x.webp 2x" type="image/webp" media="(max-width: 550px)">
         <source srcset="{{ $bgMobile }}.{{ $imageType }}, {{ $bgMobile }}@2x.{{ $imageType }} 2x" media="(max-width: 550px)">
         <source srcset="{{ $bg }}.webp" type="image/webp">
-        <img src="{{ $bg }}.{{ $imageType }}" class="m-auto w-full h-full object-center object-cover tablet:object-fill mobile-550:w-auto mobile-550:w-auto mobile-550:h-auto">
+        <img src="{{ $bg }}.{{ $imageType }}" class="m-auto w-full h-full object-center object-cover mobile-550:w-auto mobile-550:w-auto mobile-550:h-auto">
     </picture>
     <div class="relative z-20 pt-355 text-center mobile-550:pt-20 mobile-550:pb-40">
         <div class="font-oranien text-white text-48 tracking-1.2 mobile-550:text-44 mobile-500:text-42

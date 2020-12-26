@@ -18,10 +18,10 @@ const slider = tns({
     mouseDrag: true,
     prevButton: '.main-slider-prev-button',
     nextButton: '.main-slider-next-button',
-    autoplay: true,
+    /*autoplay: true,
     autoplayHoverPause: true,
     autoplayTimeout: 10000,
-    autoplayButtonOutput: false,
+    autoplayButtonOutput: false,*/
 });
 
 setDisplayType();
