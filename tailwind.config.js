@@ -1,10 +1,18 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-    purge: [
-        './resources/**/*.blade.php',
-        './resources/**/*.js',
-    ],
+    purge: {
+        content: [
+            './resources/**/*.blade.php',
+            './resources/**/*.js',
+            './config/app.php',
+        ],
+        options: {
+            safelist: {
+                deep: [/tns/, /fancybox/],
+            }
+        }
+    },
     darkMode: false,
     theme: {
         fontFamily: {

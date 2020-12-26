@@ -26,7 +26,7 @@
             @include('_top_menu_link', ['name' => 'Контакты', 'href' => '#contacts'])
         </div>
         <div>
-            @include('_logo_header')
+            @include('_logo_header', ['id' => 1])
         </div>
         <div class="flex group mr-1 pr-20 pt-57 relative z-20">
             <div class="pr-23 text-right">
@@ -70,7 +70,7 @@
         @include('_contacts_info')
     </div>
     <div class="block absolute top-70 z-20 left-0 right-0 m-auto">
-        @include('_logo_header')
+        @include('_logo_header', ['id' => 2])
     </div>
 @endif
 <div class="main-slider-wrapper relative">

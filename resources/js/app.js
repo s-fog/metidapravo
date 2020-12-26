@@ -162,25 +162,29 @@ function clearErrors() {
     });
 }
 
-ymaps
-    .load('https://api-maps.yandex.ru/2.1/?lang=ru_RU')
-    .then(maps => {
-        const center = [55.544489, 37.722648],
-            map = new maps.Map(document.getElementById('map'), {
-                center: center,
-                zoom: 15
-            }),
-            myPlacemark = new maps.Placemark(center, {
+window.onload = () => {
+    setTimeout(() => {
+        ymaps
+            .load('https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+            .then(maps => {
+                const center = [55.544489, 37.722648],
+                    map = new maps.Map(document.getElementById('map'), {
+                        center: center,
+                        zoom: 15
+                    }),
+                    myPlacemark = new maps.Placemark(center, {
 
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: '/svg/map_m.svg',
-                iconImageSize: [76, 74],
-                iconImageOffset: [-38, -37]
-            });
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: '/svg/map_m.svg',
+                        iconImageSize: [76, 74],
+                        iconImageOffset: [-38, -37]
+                    });
 
-        map.behaviors.disable('scrollZoom')
+                map.behaviors.disable('scrollZoom')
 
-        map.geoObjects.add(myPlacemark);
-    })
-    .catch(error => console.log('Failed to load Yandex Maps', error));
+                map.geoObjects.add(myPlacemark);
+            })
+            .catch(error => console.log('Failed to load Yandex Maps', error));
+    }, 200)
+}
