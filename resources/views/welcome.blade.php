@@ -11,7 +11,7 @@
     <link href="{{ mix('css/fancybox.css') }}" rel="stylesheet">
     <link href="{{ mix('css/tiny-slider.css') }}" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <title>Laravel</title>
+    <title>Метида. Юридическая фирма.</title>
 </head>
 <body class="">
 @if(!$isMobile)
@@ -26,7 +26,7 @@
             @include('_top_menu_link', ['name' => 'Контакты', 'href' => '#contacts'])
         </div>
         <div>
-            @include('_logo_header', ['id' => 1])
+            @include('_logo_header')
         </div>
         <div class="flex group mr-1 pr-20 pt-57 relative z-20">
             <div class="pr-23 text-right">
@@ -35,7 +35,7 @@
                     'phoneClear' => $phones[0]['phoneClear'],
                     'color' => 'white',
                 ])
-                <div class="text-white text-md underline mt-10">{!! config('app.address') !!}</div>
+                <div class="text-white text-md underline mt-10">МО, Ленинский район <br> г. Видное, ул. Ольховая д.4</div>
             </div>
             <div class="relative mt-17 rounded-full bg-grey transition group-hover:bg-grey-hover"
                  style="width: 47px;height: 47px;">
@@ -69,8 +69,8 @@
         <div class="h-1 bg-hr mt-11 mb-17"></div>
         @include('_contacts_info')
     </div>
-    <div class="block absolute top-70 z-20 left-0 right-0 m-auto">
-        @include('_logo_header', ['id' => 2])
+    <div class="block absolute top-90 z-20 left-0 right-0 m-auto text-center">
+        <img src="/svg/logo_metida_01.svg" alt="logo" class="w-150px inline-block">
     </div>
 @endif
 <div class="main-slider-wrapper relative">
@@ -111,6 +111,7 @@
         <img src="/img/bg.jpg" alt="bg" class="inline-block">
     </picture>
     <div class="relative z-20">
+        <div id="about"></div>
         @include('_header', ['header' => 'О компании'])
         <div class="text-justify box-border px-10 mx-auto mt-34 text-16 leading-1.7" style="max-width: 840px">
             Юридическая компания «Метида» — это команда юристов с большим опытом работы в части представления и защиты интересов граждан в спорах с государственными органами власти, а также в судебных процессах. Тщательно анализируя все тонкости гражданско-правовых норм мы можем гарантировать, что ваш вопрос будет изучен и проанализирован тщательнейшим образом, а наши правовые специалисты смогут грамотно и убедительно донести процессуальную позицию до ответственных представителей государственной и муниципальной власти и судьи, председательствующего в судебном заседании. В работе мы всегда придерживаемся принципов добросовестности, справедливости и честности, потому что дорожим доверием наших клиентов и ценим Вашу высокую оценку качества наших услуг.
@@ -142,6 +143,7 @@
                 'header' => 'Гарантированная защита <br> личной информации '
             ])
         </div>
+        <div id="services"></div>
         @include('_header', ['header' => 'Услуги'])
         <div class="flex justify-center flex-wrap container mt-28">
             @include('_service', [
@@ -180,6 +182,7 @@
                     консультацию',
             ])
         </div>
+        <div id="contacts"></div>
         @include('_header', ['header' => 'Контакты', 'classes' => 'mt-4'])
         <div class="text-center w-598px h-376px relative z-20 mx-auto -mt-4 pt-38 px-60 box-border -mb-222
         mobile-550:w-auto mobile-550:h-auto  mobile-550:bg-white mobile-550:mb-20 mobile-550:px-10">
@@ -223,7 +226,7 @@
                     'phoneClear' => $phones[0]['phoneClear'],
                     'color' => 'white',
                 ])
-                <div class="text-white text-md underline mt-12">{!! config('app.address') !!}</div>
+                <div class="text-white text-md underline mt-12">МО, Ленинский район <br> г. Видное, ул. Ольховая д.4</div>
             </div>
         </div>
     </div>
@@ -266,5 +269,18 @@
 </div>
 </div>
 <script src="{{mix('js/app.js')}}"></script>
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(70830172, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/70830172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>

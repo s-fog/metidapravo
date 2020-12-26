@@ -188,3 +188,9 @@ window.onload = () => {
             .catch(error => console.log('Failed to load Yandex Maps', error));
     }, 200)
 }
+
+$('.js-menu-item').on('click', (event) => {
+    const id = $(event.currentTarget).attr('href');
+
+    $('html, body').stop().animate({scrollTop: $(id).offset().top}, 300, 'swing');
+})

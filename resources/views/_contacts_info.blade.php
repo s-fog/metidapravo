@@ -9,7 +9,7 @@
     'phoneClear' => $phones[1]['phoneClear'],
     'color' => 'primary',
 ])
-<div class="text-md mt-20">{!! config('app.address') !!}, помещение 16, лит. A1, комната 23</div>
+<div class="text-md mt-20">МО, Ленинский район г. Видное, <br> ул. Ольховая д.4, помещение 16, лит. A1, комната 23</div>
 <div class="h-1 bg-hr mt-11 mb-17"></div>
 <a href="mailto:info@metidapravo.ru" class="block mb-2">info@metidapravo.ru</a>
 <a href="/cart_org_metida.pdf" target="_blank" class="link block">Карточка организации | pdf</a>

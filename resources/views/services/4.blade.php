@@ -1,6 +1,6 @@
 <div{!! config('app.service-popup-div') !!}>
     @include('_logo_popup')
-    @include('_popup_header', ['header' => 'Подготовка документов'])
+    @include('_popup_header', ['header' => 'Подготовка <br> документов'])
     @include('services/_line')
     @include('services/_button')
     <ul class="text-white text-left mt-20">

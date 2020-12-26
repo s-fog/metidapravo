@@ -1,6 +1,6 @@
 <div{!! config('app.service-popup-div') !!}>
     @include('_logo_popup')
-    @include('_popup_header', ['header' => 'Представительство в Арбитражных судах'])
+    @include('_popup_header', ['header' => 'Представительство <br> в Арбитражных судах'])
     @include('services/_line')
     @include('services/_button')
     @include('services/_item', [

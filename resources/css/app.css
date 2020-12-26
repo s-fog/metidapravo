@@ -80,15 +80,14 @@
     }
 
     .main-slider-arrow {
-        width: 94px;
-        height: 94px;
-        @apply absolute bottom-280 outline-none flex justify-center items-center rounded-full bg-grey cursor-pointer
-        mobile-550:top-525 mobile-550:transform mobile-550:-translate-y-7;
+        @apply absolute bottom-280 outline-none flex justify-center
+        items-center rounded-full bg-grey cursor-pointer w-94px h-94px
+        mobile-550:bottom-0 mobile-550:transform mobile-550:-translate-y-7 mobile-550:w-50 mobile-550:h-50;
     }
 
     .tns-nav {
         @apply absolute top-full block text-center h-0 w-full transform -translate-y-50 z-30
-        mobile-550:translate-y-0 mobile-550:top-525;
+        mobile-550:translate-y-0 mobile-550:hidden;
     }
 
     .tns-nav button {
@@ -202,5 +201,31 @@
     }
     .link-span-reverse span {
         @apply border-b border-transparent transition;
+    }
+}
+
+@screen mobile-550 {
+    .main-slider-arrow {
+        top: 450px;
+    }
+}
+@screen mobile-500 {
+    .main-slider-arrow {
+        top: 400px;
+    }
+}
+@screen mobile-450 {
+    .main-slider-arrow {
+        top: 350px;
+    }
+}
+@screen mobile-400 {
+    .main-slider-arrow {
+        top: 300px;
+    }
+}
+@screen mobile-350 {
+    .main-slider-arrow {
+        top: 250px;
     }
 }
