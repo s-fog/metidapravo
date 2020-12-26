@@ -3,7 +3,7 @@
         <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
             <tr>
                 <td class="content-cell" align="center">
-                    {{ Illuminate\Mail\Markdown::parse('metida.ru') }}
+                    {{ Illuminate\Mail\Markdown::parse('metidapravo.ru') }}
                 </td>
             </tr>
         </table>
