@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-display: swap;
+        font-family: 'Nimbus';
+        src: url('../fonts/nimbussannovmed_w00_regular-webfont.eot');
+        src: url('../fonts/nimbussannovmed_w00_regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/nimbussannovmed_w00_regular-webfont.woff2') format('woff2'),
+        url('../fonts/nimbussannovmed_w00_regular-webfont.woff') format('woff'),
+        url('../fonts/nimbussannovmed_w00_regular-webfont.ttf') format('truetype'),
+        url('../fonts/nimbussannovmed_w00_regular-webfont.svg#nimbussannovmedw00-regularRg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Oranien';
+        src: url('../fonts/oranienbaum-webfont.eot');
+        src: url('../fonts/oranienbaum-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/oranienbaum-webfont.woff2') format('woff2'),
+        url('../fonts/oranienbaum-webfont.woff') format('woff'),
+        url('../fonts/oranienbaum-webfont.ttf') format('truetype'),
+        url('../fonts/oranienbaum-webfont.svg#oranienbaumregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'GothamPro';
+        src: url('../fonts/GothamPro.eot');
+        src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro.woff') format('woff'),
+        url('../fonts/GothamPro.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    html {
+        @apply font-primary;
+        min-width: 1263px;
+        width: 100%;
+        @apply mobile-550:min-w-0;
+    }
+
+    .fancybox-is-open .fancybox-bg {
+        opacity: 0.97;
+    }
+
+    .fancybox-active {
+        overflow: hidden;
+    }
+
+    [name="BC"] {
+        display: none;
+    }
+}
+
+@layer components {
+    .container {
+        margin: 0 auto;
+        max-width: 1263px;
+        min-width: 1263px;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        @apply mobile-550:min-w-0;
+    }
+
+    .button {
+        @apply inline-block font-oranien text-20 bg-orange hover:bg-orange-hover text-center py-16 px-50 rounded-lg
+        mt-19 tracking-04 transition cursor-pointer;
+
+
+    }
+    .button-larger {
+        @apply mt-30 text-24 px-30 py-18;
+    }
+
+    .main-slider-arrow {
+        width: 94px;
+        height: 94px;
+        @apply absolute bottom-280 outline-none flex justify-center items-center rounded-full bg-grey cursor-pointer
+        mobile-550:top-525 mobile-550:transform mobile-550:-translate-y-7;
+    }
+
+    .tns-nav {
+        @apply absolute top-full block text-center h-0 w-full transform -translate-y-50 z-30
+        mobile-550:translate-y-0 mobile-550:top-525;
+    }
+
+    .tns-nav button {
+        @apply w-10 h-10 rounded-full bg-grey hover:bg-grey-hover inline-block transition mx-5 outline-none;
+    }
+
+    .tns-nav button.tns-nav-active, .tns-nav button:hover {
+        @apply bg-orange;
+    }
+
+    .tns-inner {
+        @apply mobile-550:bg-grey-dark;
+    }
+
+    .mobile-header-trigger {
+        @apply flex justify-between items-center ;
+    }
+    .mobile-header-trigger.active span {
+        @apply border-white;
+    }
+    .mobile-header-trigger.active span:nth-child(1), .mobile-header-trigger.active span:nth-child(4) {
+        @apply top-11 w-0 left-1/2;
+    }
+    .mobile-header-trigger.active span:nth-child(2) {
+        @apply w-95% transform rotate-45;
+    }
+    .mobile-header-trigger.active span:nth-child(3) {
+        @apply w-95% transform -rotate-45;
+    }
+    .mobile-header-trigger-inner {
+        @apply relative w-31 h-25;
+    }
+    .mobile-header-trigger-inner span {
+        @apply absolute left-0 rounded-full w-full h-3 bg-white opacity-100 transform rotate-0 transition;
+    }
+    .mobile-header-trigger-inner span:nth-child(1) {
+        @apply top-0;
+    }
+    .mobile-header-trigger-inner span:nth-child(2), .mobile-header-trigger-inner span:nth-child(3) {
+        top: 11px;
+    }
+    .mobile-header-trigger-inner span:nth-child(4) {
+        top: 22px;
+    }
+
+    .mobile-menu.active {
+        @apply visible opacity-100;
+    }
+
+    .fancybox-close-small {
+        @apply w-60 h-60;
+
+    }
+    .fancybox-close-small svg {
+        @apply opacity-50 hover:opacity-100;
+    }
+    .fancybox-close-small svg path {
+        fill: #fff;
+    }
+
+    [type="submit"].loading {
+        background-image: url(../svg/loading.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 100%;
+        color: transparent;
+    }
+}
+
+@layer utilities {
+    .link {
+        @apply inline-block
+        border-b
+        border-inherit
+        color-inherit
+        no-underline
+        transition
+        hover:border-transparent;
+    }
+    .link-reverse {
+        @apply inline-block
+        border-b
+        border-transparent
+        no-underline
+        transition
+        hover:border-inherit;
+    }
+
+    .link-span {
+        @apply group
+        inline-block
+        color-inherit
+        no-underline;
+    }
+    .link-span:hover span {
+        @apply border-transparent;
+    }
+    .link-span span {
+        @apply border-b
+        transition;
+    }
+
+    .link-span-reverse {
+        @apply group
+        inline-block
+        color-inherit
+        no-underline;
+    }
+    .link-span-reverse:hover span {
+        @apply border-inherit;
+    }
+    .link-span-reverse span {
+        @apply border-b border-transparent transition;
+    }
+}

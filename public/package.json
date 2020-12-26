@@ -1,0 +1,36 @@
+{
+    "name": "s-fog-webpack",
+    "version": "0.0.1",
+    "description": "S-fog webpack for projects",
+    "main": "src/js/Application.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "@fp-pro/client": "^2.8.0",
+        "browser-sync": "^2.26.10",
+        "gulp": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-concat": "*",
+        "gulp-imagemin": "*",
+        "gulp-minify-css": "*",
+        "gulp-plumber": "*",
+        "gulp-sass": "*",
+        "gulp-uglify": "*",
+        "gulp-watch": "*",
+        "imagemin-jpeg-recompress": "*",
+        "imagemin-pngquant": "*"
+    },
+    "author": "S-fog",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "*",
+        "@babel/preset-env": "*",
+        "gulp-babel": "*",
+        "gulp-browsersync-inject": "^1.0.1",
+        "gulp-cache-files": "*",
+        "gulp-clone": "*",
+        "gulp-sourcemaps": "*",
+        "gulp-webp": "*"
+    }
+}
