@@ -6,7 +6,7 @@
         <source srcset="{{ $bg }}.webp" type="image/webp">
         <img src="{{ $bg }}.{{ $imageType }}" class="m-auto w-full h-full object-center object-cover tablet:object-fill mobile-550:w-auto mobile-550:w-auto mobile-550:h-auto">
     </picture>
-    <div class="relative z-20 pt-355 text-center mobile-550:pt-60 mobile-550:pb-40">
+    <div class="relative z-20 pt-355 text-center mobile-550:pt-20 mobile-550:pb-40">
         <div class="font-oranien text-white text-48 tracking-1.2 mobile-550:text-44 mobile-500:text-42
          mobile-450:text-40 mobile-400:text-36 mobile-350:text-32">{{ $header }}</div>
         <div class="mx-auto text-justify text-white text-16 mt-27 leading-1.7

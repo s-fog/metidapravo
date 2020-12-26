@@ -17,7 +17,11 @@ const slider = tns({
     preventScrollOnTouch: true,
     mouseDrag: true,
     prevButton: '.main-slider-prev-button',
-    nextButton: '.main-slider-next-button'
+    nextButton: '.main-slider-next-button',
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 10000,
+    autoplayButtonOutput: false,
 });
 
 setDisplayType();

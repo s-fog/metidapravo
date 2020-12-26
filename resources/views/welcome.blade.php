@@ -29,13 +29,13 @@
             @include('_logo_header')
         </div>
         <div class="flex group mr-1 pr-20 pt-57 relative z-20">
-            <div class="pr-23 text-right">
+            <div class="pr-23 text-right text-white">
                 @include('_phone', [
                     'phone' => $phones[0]['phone'],
                     'phoneClear' => $phones[0]['phoneClear'],
                     'color' => 'white',
                 ])
-                <div class="text-white text-md underline mt-10">МО, Ленинский район <br> г. Видное, ул. Ольховая д.4</div>
+                <a class="link-span text-md underline mt-10 opacity-70 js-menu-item" href="#contacts"><span>МО, Ленинский район <br> г. Видное, ул. Ольховая д.4</span></a>
             </div>
             <div class="relative mt-17 rounded-full bg-grey transition group-hover:bg-grey-hover"
                  style="width: 47px;height: 47px;">
@@ -70,7 +70,7 @@
         @include('_contacts_info')
     </div>
     <div class="block absolute top-90 z-20 left-0 right-0 m-auto text-center">
-        <img src="/svg/logo_metida_01.svg" alt="logo" class="w-150px inline-block">
+        <img src="/svg/logo_metida_01.svg" alt="logo" class="w-180px inline-block">
     </div>
 @endif
 <div class="main-slider-wrapper relative">
@@ -204,7 +204,7 @@
     mobile-550:block">
         <div class="text-white pt-72 pl-41 relative z-20
         mobile-550:pt-0 mobile-550:pl-0">
-            <div class="flex
+            <div class="flex opacity-70
             mobile-550:justify-center mobile-550:flex-wrap">
                 @include('_top_menu_link', ['name' => 'О компании', 'href' => '#about'])
                 @include('_top_menu_link', ['name' => 'Услуги', 'href' => '#services'])
@@ -218,7 +218,7 @@
         mobile-550:hidden">
             @include('_logo_footer')
         </div>
-        <div class="flex group mr-1 pr-20 pt-72 relative z-20
+        <div class="flex group mr-1 pr-20 pt-72 relative z-20 opacity-70
         mobile-550:hidden">
             <div class="pr-23 text-right">
                 @include('_phone', [

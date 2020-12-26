@@ -198,7 +198,7 @@ module.exports = {
         },
         extend: {
             width: {
-                '150px': '150px',
+                '180px': '180px',
                 '598px': '598px',
                 '550px': '553px',
                 '410px': '410px',
