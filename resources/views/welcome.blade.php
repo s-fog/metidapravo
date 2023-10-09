@@ -211,7 +211,7 @@
                 @include('_top_menu_link', ['name' => 'Контакты', 'href' => '#contacts'])
             </div>
             <div class="text-white opacity-60 text-12 mt-21 leading-1.4
-            mobile-550:text-center">© <?=date('Y')?> www.metidapravo.ru. Все права защищены. <br>
+            mobile-550:text-center">© <?=date('Y')?> www.metipravo.ru. Все права защищены. <br>
                 <a href="/doc.pdf" target="_blank" class="link-span"><span>Согласие на обработку персональных данных</span></a>.</div>
         </div>
         <div class="transform -translate-x-89
@@ -259,7 +259,7 @@
             </a>.</div>
     </div>
     <input type="text" name="BC" value="">
-    <input type="hidden" name="subject" value="Заказана консультация metida.ru">
+    <input type="hidden" name="subject" value="Заказана консультация meti">
 </form>
 <div class="block text-center hidden bg-transparent p-0" id="success">
     @include('_logo_popup')
