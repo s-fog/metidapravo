@@ -213,7 +213,7 @@
             <div class="text-white opacity-60 text-12 mt-21 leading-1.4
             mobile-550:text-center">© <?=date('Y')?> www.metipravo.ru. Все права защищены. <br>
                 <a href="/doc.pdf" target="_blank" class="link-span"><span>Согласие на обработку персональных данных</span></a>.</div>
-        </div>0
+        </div>
         <div class="transform -translate-x-89
         mobile-550:hidden">
             @include('_logo_footer')
