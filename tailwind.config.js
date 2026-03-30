@@ -32,6 +32,7 @@ module.exports = {
             primary: '#000',
             white: '#fff',
             red: '#f00',
+            bb: '#3C3C3C',
             orange: {
                 DEFAULT: '#eab78c',
                 hover: '#e4ab7b',
@@ -197,6 +198,9 @@ module.exports = {
             '2': '2',
         },
         extend: {
+            maxWidth: {
+              'bb': '1010px',
+            },
             width: {
                 '180px': '180px',
                 '598px': '598px',

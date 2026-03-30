@@ -198,3 +198,9 @@ $('.js-menu-item').on('click', (event) => {
 
     $('html, body').stop().animate({scrollTop: $(id).offset().top}, 300, 'swing');
 })
+
+$('#cookie-allow').on('click', (event) => {
+  $.post(`/cookies-close`).then(() => {
+    document.getElementById('cookiesClose').style.display = 'none'
+  })
+})

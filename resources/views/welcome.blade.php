@@ -213,8 +213,14 @@
                 @include('_top_menu_link', ['name' => 'Контакты', 'href' => '#contacts'])
             </div>
             <div class="text-white opacity-60 text-12 mt-21 leading-1.4
-            mobile-550:text-center">© <?=date('Y')?> www.metipravo.ru. Все права защищены. <br>
-                <a href="/doc.pdf" target="_blank" class="link-span"><span>Согласие на обработку персональных данных</span></a>.</div>
+            mobile-550:text-center">© <?=date('Y')?> www.metipravo.ru. Все права защищены.
+                <br>
+                <a href="/data_policy.pdf" target="_blank" class="link-span"><span>Политика конфиденциальности</span></a>
+                <br>
+                <a href="/cookie_policy.pdf" target="_blank" class="link-span"><span>Политика использования файлов cookie</span></a>
+                <br>
+                <a href="/cart_org.pdf" target="_blank" class="link-span"><span>Карточка организации</span></a>
+            </div>
         </div>
         <div class="transform -translate-x-89
         mobile-550:hidden">
@@ -255,10 +261,8 @@
             ])
         </div>
         <button type="submit" class="button button-bigger mt-25" style="outline: none;">Заказать консультацию</button>
-        <div class="text-white mt-25 text-12">Заказывая обратный звонок, Вы принимаете <br>
-            <a href="/doc.pdf" target="_blank" class="link-span">
-                <span>условия обработки персональных данных</span>
-            </a>.</div>
+        <div class="text-white mt-25 text-12">Отправляя заявку, Вы соглашаетесь с <a href="/cookie_policy.pdf" target="_blank" class="block link-span"><span>обработкой файлов cookie</span></a> и <a href="/data_policy.pdf" target="_blank" class="block link-span"><span>условиями политики конфиденциальности</span></a>.
+        </div>
     </div>
     <input type="text" name="BC" value="">
     <input type="hidden" name="subject" value="Заказана консультация meti">
@@ -270,6 +274,18 @@
         в самое ближайшее время.</div>
 </div>
 </div>
+
+@if(! request()->hasCookie('is_cookies_closed'))
+    <div class="fixed bottom-0 left-0 w-full py-24 mobile-550:py-14 bg-bb z-50" id="cookiesClose">
+        <div class="flex mobile-550:block items-center justify-center gap-4 mx-auto max-w-bb w-full mobile-550:px-14">
+            <div class="mobile-550:mb-4 text-white text-12">Продолжая пользоваться сайтом, вы соглашаетесь <a href="/cookie_policy.pdf" target="_blank" class="link-span"><span>на обработку файлов cookie</span></a> и других пользовательских данных в соответствии с <a href="/data_policy.pdf" target="_blank" class="link-span"><span>политикой конфиденциальности</span></a>. Заблокировать использование cookies сайтом можно в настройках браузера.</div>
+            <div @click="cookiesClose">
+                <div class="button py-9 px-55 m-0" id="cookie-allow">Разрешить</div>
+            </div>
+        </div>
+    </div>
+@endif
+
 <script src="{{mix('js/app.js')}}"></script>
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

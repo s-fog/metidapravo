@@ -17,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::post('/cookies-close', function () {
+    return response('ok')
+        ->cookie(cookie('is_cookies_closed', '1', 60 * 30));
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
